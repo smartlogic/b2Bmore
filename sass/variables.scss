@@ -1,0 +1,31 @@
+$breakpoint1: 1200px;
+$breakpoint2: 960px;
+$breakpoint3: 768px;
+$breakpoint4: 600px;
+$breakpoint-mobile: 480px;
+
+$orange: #ff8228;
+$lime-green: #b4dc50;
+$green: #00c896;
+$black: #333;
+$light-gray: #ccc;
+
+@mixin responsive-width {
+  width: $breakpoint1;
+  margin: 0 auto;
+  @media (max-width: $breakpoint1) {
+    width: $breakpoint2;
+  }
+  @media (max-width: $breakpoint2) {
+    width: $breakpoint3;
+  }
+  @media (max-width: $breakpoint3) {
+    width: $breakpoint4;
+  }
+  @media (max-width: $breakpoint4) {
+    width: $breakpoint-mobile;
+  }
+  @media (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+}

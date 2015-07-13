@@ -1,0 +1,66 @@
+@import '../bourbon/bourbon';
+@import 'fonts';
+@import 'variables';
+
+* {
+  @include box-sizing(border-box);
+}
+
+body {
+  @include responsive-width;
+  color: $black;
+  background-color: #fff;
+  font-family: 'LTCircular', sans-serif;
+  padding: 2em;
+  header {
+    padding: 0 0 2em 0;
+    h1 {
+      display: inline-block;
+      width: 20em;
+      height: 3.6em;
+      vertical-align: middle;
+      background-image: url('../images/b2Bmore-logo.png');
+      background-repeat: none;
+      background-size: 20em 3.6em;
+      text-indent: -9990px;
+      margin: 0 2em 0 0;
+    }
+    ul {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 1em 0 0 0;
+      li {
+        display: inline-block;
+        margin: 0 0 0 2em;
+        a {
+          display: block;
+          color: $orange;
+          font-size: 1.25em;
+          text-decoration: none;
+          padding: .5em 0;
+        }
+      }
+    }
+  }
+  section {
+    border-top: solid 1px $light-gray;
+    padding: 2em 0;
+    h2,
+    h3 {
+      color: $green;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 0 0 1em 0;
+    }
+    h3 {
+      font-size: 1.25em;
+    }
+    p {
+      line-height: 1.5em;
+      margin: 0 0 1em 0;
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+}
