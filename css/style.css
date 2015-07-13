@@ -99,5 +99,7 @@ body {
       margin: 0 0 1em 0; }
       body section p:last-of-type {
         margin: 0; }
+    body section iframe {
+      margin: 2em 0 0 0; }
 
 /*# sourceMappingURL=style.css.map */
