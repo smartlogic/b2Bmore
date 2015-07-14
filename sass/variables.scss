@@ -29,3 +29,16 @@ $light-gray: #ccc;
     width: 100%;
   }
 }
+
+@mixin green-button {
+  @include transition(all 0.5s);
+  display: inline-block;
+  color: #fff;
+  background-color: $green;
+  font-size: 1.25em;
+  border-radius: .25em;
+  padding: 1em 3em;
+  &:hover {
+    background-color: lighten($green, 7%);
+  }
+}

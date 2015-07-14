@@ -36,6 +36,18 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+a {
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  transition: color 0.5s;
+  color: #ff8228;
+  text-decoration: none; }
+  a:hover {
+    color: #da5b00; }
+
+strong {
+  font-weight: bold; }
+
 body {
   width: 1200px;
   margin: 0 auto;
@@ -99,38 +111,80 @@ body {
       margin: 0 0 1em 0; }
       body section p:last-of-type {
         margin: 0; }
+    body section#introduction {
+      font-size: 0; }
+      body section#introduction div {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        font-size: 16px;
+        margin: 2em 0;
+        padding: 0 1em 0 0; }
+        body section#introduction div:last-of-type {
+          text-align: center;
+          padding: 0 0 0 1em; }
+          body section#introduction div:last-of-type p {
+            font-size: 1.25em;
+            font-weight: bold;
+            margin: 0 0 1em 0; }
+          body section#introduction div:last-of-type a {
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            transition: all 0.5s;
+            display: inline-block;
+            color: #fff;
+            background-color: #00c896;
+            font-size: 1.25em;
+            border-radius: .25em;
+            padding: 1em 3em; }
+            body section#introduction div:last-of-type a:hover {
+              background-color: #00ecb1; }
     body section iframe {
-      margin: 2em 0 0 0; }
-    body section table {
+      margin: 1em 0 2em 0; }
+    body section#schedule table {
       width: 100%;
       background-color: #fff; }
-      body section table thead tr td {
+      body section#schedule table thead tr td {
         background-color: rgba(0, 200, 150, 0.35); }
-      body section table tr td {
+      body section#schedule table tr td {
         width: 12.5%;
         background-color: rgba(0, 200, 150, 0.15);
         text-align: center;
         border-right: solid 2px #fff;
         border-bottom: solid 2px #fff;
         padding: 1em .5em; }
-        body section table tr td:last-of-type {
+        body section#schedule table tr td:last-of-type {
           width: 75%;
           border-right: none;
           padding: 0; }
-          body section table tr td:last-of-type table {
+          body section#schedule table tr td:last-of-type table {
             width: 100%; }
-            body section table tr td:last-of-type table tr td {
+            body section#schedule table tr td:last-of-type table tr td {
               overflow-wrap: break-word;
               word-wrap: break-word;
               word-break: break-all;
               width: 20%;
               border-bottom: none;
               padding: 1em .5em; }
-              body section table tr td:last-of-type table tr td:last-of-type {
+              body section#schedule table tr td:last-of-type table tr td:last-of-type {
                 border-right: none; }
-    body section > table > tbody > tr:last-of-type td {
+    body section#schedule > table > tbody > tr:last-of-type td {
       border-bottom: none; }
-    body section > table > tbody > tr > td:nth-child(2) {
+    body section#schedule > table > tbody > tr > td:nth-child(2) {
       border-bottom: none; }
+    body section#hosts div {
+      display: inline-block;
+      width: 50%;
+      float: left;
+      vertical-align: top;
+      font-size: 16px;
+      margin: 0 0 2em 0;
+      padding: 0 1em 0 0; }
+      body section#hosts div:last-of-type {
+        padding: 0 0 0 1em; }
+      body section#hosts div img {
+        max-width: 100%;
+        height: auto;
+        padding: 0 2em 2em 2em; }
 
 /*# sourceMappingURL=style.css.map */

@@ -6,6 +6,19 @@
   @include box-sizing(border-box);
 }
 
+a {
+  @include transition(color 0.5s);
+  color: $orange;
+  text-decoration: none;
+  &:hover {
+    color: darken($orange, 15%);
+  }
+}
+
+strong {
+  font-weight: bold;
+}
+
 body {
   @include responsive-width;
   color: $black;
@@ -62,41 +75,66 @@ body {
         margin: 0;
       }
     }
-    iframe {
-      margin: 2em 0 0 0;
-    }
-    table {
-      width: 100%;
-      background-color: #fff;
-      thead {
-        tr {
-          td {
-            background-color: rgba($green, .35);
+    &#introduction {
+      font-size: 0;
+      div {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        font-size: 16px;
+        margin: 2em 0;
+        padding: 0 1em 0 0;
+        &:last-of-type {
+          text-align: center;
+          padding: 0 0 0 1em;
+          p {
+            font-size: 1.25em;
+            font-weight: bold;
+            margin: 0 0 1em 0;
+          }
+          a {
+            @include green-button;
           }
         }
       }
-      tr {
-        td {
-          width: 12.5%;
-          background-color: rgba($green, .15);
-          text-align: center;
-          border-right: solid 2px #fff;
-          border-bottom: solid 2px #fff;
-          padding: 1em .5em;
-          &:last-of-type {
-            width: 75%;
-            border-right: none;
-            padding: 0;
-            table {
-              width: 100%;
-              tr {
-                td {
-                  @include word-wrap(break-word);
-                  width: 20%;
-                  border-bottom: none;
-                  padding: 1em .5em;
-                  &:last-of-type {
-                    border-right: none;
+    }
+    iframe {
+      margin: 1em 0 2em 0;
+    }
+    &#schedule {
+      table {
+        width: 100%;
+        background-color: #fff;
+        thead {
+          tr {
+            td {
+              background-color: rgba($green, .35);
+            }
+          }
+        }
+        tr {
+          td {
+            width: 12.5%;
+            background-color: rgba($green, .15);
+            text-align: center;
+            border-right: solid 2px #fff;
+            border-bottom: solid 2px #fff;
+            padding: 1em .5em;
+            &:last-of-type {
+              width: 75%;
+              border-right: none;
+              padding: 0;
+              table {
+                width: 100%;
+                tr {
+                  td {
+                    @include word-wrap(break-word);
+                    width: 20%;
+                    border-bottom: none;
+                    padding: 1em .5em;
+                    &:last-of-type {
+                      border-right: none;
+                    }
                   }
                 }
               }
@@ -104,18 +142,37 @@ body {
           }
         }
       }
-    }
-    > table {
-      > tbody {
-        > tr {
-          &:last-of-type {
-            td {
+      > table {
+        > tbody {
+          > tr {
+            &:last-of-type {
+              td {
+                border-bottom: none;
+              }
+            }
+            > td:nth-child(2) {
               border-bottom: none;
             }
           }
-          > td:nth-child(2) {
-            border-bottom: none;
-          }
+        }
+      }
+    }
+    &#hosts {
+      div {
+        display: inline-block;
+        width: 50%;
+        float: left;
+        vertical-align: top;
+        font-size: 16px;
+        margin: 0 0 2em 0;
+        padding: 0 1em 0 0;
+        &:last-of-type {
+          padding: 0 0 0 1em;
+        }
+        img {
+          max-width: 100%;
+          height: auto;
+          padding: 0 2em 2em 2em;
         }
       }
     }
