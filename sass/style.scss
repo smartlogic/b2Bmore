@@ -65,5 +65,59 @@ body {
     iframe {
       margin: 2em 0 0 0;
     }
+    table {
+      width: 100%;
+      background-color: #fff;
+      thead {
+        tr {
+          td {
+            background-color: rgba($green, .35);
+          }
+        }
+      }
+      tr {
+        td {
+          width: 12.5%;
+          background-color: rgba($green, .15);
+          text-align: center;
+          border-right: solid 2px #fff;
+          border-bottom: solid 2px #fff;
+          padding: 1em .5em;
+          &:last-of-type {
+            width: 75%;
+            border-right: none;
+            padding: 0;
+            table {
+              width: 100%;
+              tr {
+                td {
+                  @include word-wrap(break-word);
+                  width: 20%;
+                  border-bottom: none;
+                  padding: 1em .5em;
+                  &:last-of-type {
+                    border-right: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    > table {
+      > tbody {
+        > tr {
+          &:last-of-type {
+            td {
+              border-bottom: none;
+            }
+          }
+          > td:nth-child(2) {
+            border-bottom: none;
+          }
+        }
+      }
+    }
   }
 }

@@ -101,5 +101,36 @@ body {
         margin: 0; }
     body section iframe {
       margin: 2em 0 0 0; }
+    body section table {
+      width: 100%;
+      background-color: #fff; }
+      body section table thead tr td {
+        background-color: rgba(0, 200, 150, 0.35); }
+      body section table tr td {
+        width: 12.5%;
+        background-color: rgba(0, 200, 150, 0.15);
+        text-align: center;
+        border-right: solid 2px #fff;
+        border-bottom: solid 2px #fff;
+        padding: 1em .5em; }
+        body section table tr td:last-of-type {
+          width: 75%;
+          border-right: none;
+          padding: 0; }
+          body section table tr td:last-of-type table {
+            width: 100%; }
+            body section table tr td:last-of-type table tr td {
+              overflow-wrap: break-word;
+              word-wrap: break-word;
+              word-break: break-all;
+              width: 20%;
+              border-bottom: none;
+              padding: 1em .5em; }
+              body section table tr td:last-of-type table tr td:last-of-type {
+                border-right: none; }
+    body section > table > tbody > tr:last-of-type td {
+      border-bottom: none; }
+    body section > table > tbody > tr > td:nth-child(2) {
+      border-bottom: none; }
 
 /*# sourceMappingURL=style.css.map */
