@@ -132,12 +132,22 @@ body {
             color: #fff;
             background-color: #00c896;
             font-size: 1.25em;
+            line-height: 1.25em;
             border-radius: .25em;
             padding: 1em 3em; }
             body section#introduction div:last-of-type a:hover {
               background-color: #00ecb1; }
     body section iframe {
       margin: 1em 0 2em 0; }
+    body section#schedule div.mobile-schedule {
+      display: none; }
+      body section#schedule div.mobile-schedule p {
+        padding-left: 1em; }
+      body section#schedule div.mobile-schedule ul {
+        list-style: disc;
+        padding: 0 0 .5em 1em; }
+        body section#schedule div.mobile-schedule ul li {
+          margin: 0 0 .5em 0; }
     body section#schedule table {
       width: 100%;
       background-color: #fff; }
@@ -256,6 +266,10 @@ body {
       padding: 0; }
     body section#introduction > a img, body section#hosts > a img {
       width: 100%;
-      padding: 0; } }
+      padding: 0; }
+    body section#schedule div.mobile-schedule {
+      display: block; }
+    body section#schedule table.schedule {
+      display: none; } }
 
 /*# sourceMappingURL=style.css.map */
