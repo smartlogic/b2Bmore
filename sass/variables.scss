@@ -26,12 +26,18 @@ $light-gray: #ccc;
   }
 }
 
+@mixin sans-serif {
+ font-family: 'LTCircular', sans-serif !important;
+}
+
 @mixin green-button {
+  @include sans-serif;
   @include transition(all 0.5s);
   display: inline-block;
   color: #fff;
   background-color: $green;
   font-size: 1.25em;
+  font-weight: normal;
   line-height: 1.25em;
   border-radius: .25em;
   padding: 1em 3em;

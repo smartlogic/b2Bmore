@@ -21,9 +21,9 @@ strong {
 
 body {
   @include responsive-width;
+  @include sans-serif;
   color: $black;
   background-color: #fff;
-  font-family: 'LTCircular', sans-serif;
   padding: 2em;
   header {
     padding: 0 0 2em 0;
@@ -194,6 +194,70 @@ body {
           float: left;
           margin: 0 0 2em 0;
           padding: 0 4em;
+        }
+      }
+    }
+    &#application-form {
+      .hbspt-form {
+        .hs-form {
+          max-width: 760px;
+          margin: 0;
+          fieldset {
+            width: 100%;
+            max-width: none;
+            label {
+              span {
+                @include sans-serif;
+              }
+            }
+            div.input {
+              margin-right: 0;
+              input,
+              select,
+              textarea {
+                @include box-sizing(border-box);
+                width: 100%;
+                max-width: none;
+                padding: 1.5em 1em;
+              }
+            }
+            &.form-columns-2 {
+              > div:first-child {
+                padding: 0 1em 0 0;
+              }
+              > div:last-child {
+                padding: 0 0 0 1em;
+              }
+              @media (max-width: 400px) {
+                > div:first-child,
+                > div:last-child {
+                  padding: 0;
+                }
+              }
+            }
+          }
+          .hs_submit {
+            .actions {
+              margin: 0;
+              padding: 1em 0 0 0;
+              .hs-button {
+                @include green-button;
+                background-image: none;
+                text-shadow: none;
+                border: none;
+                box-shadow: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    &#brought-to-you-by {
+      a {
+        img {
+          height: 5em;
+          width: auto;
+          margin: 0 4em 2em 0;
         }
       }
     }
