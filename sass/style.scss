@@ -109,7 +109,8 @@ body {
         }
         ul {
           list-style: disc;
-          padding: 0 0 .5em 1em;
+          margin: 1em 0;
+          padding: 0 0 .5em 2em;
           li {
             margin: 0 0 .5em 0;
           }
@@ -128,6 +129,7 @@ body {
         tr {
           td {
             width: 12.5%;
+            vertical-align: middle;
             background-color: rgba($green, .15);
             text-align: center;
             border-right: solid 2px #fff;
@@ -141,12 +143,15 @@ body {
                 width: 100%;
                 tr {
                   td {
-                    @include word-wrap(break-word);
                     width: 20%;
                     border-bottom: none;
                     padding: 1em .5em;
                     &:last-of-type {
                       border-right: none;
+                    }
+                    a {
+                      color: $green;
+                      text-decoration: underline;
                     }
                   }
                 }
