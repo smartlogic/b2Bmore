@@ -91,6 +91,11 @@ body {
             font-size: 1.25em;
             font-weight: bold;
             margin: 0 0 1em 0;
+            &:last-of-type {
+              color: $green;
+              font-weight: normal;
+              margin: 0;
+            }
           }
           a {
             @include green-button;
