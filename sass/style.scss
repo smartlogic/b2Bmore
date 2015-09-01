@@ -91,6 +91,11 @@ body {
             font-size: 1.25em;
             font-weight: bold;
             margin: 0 0 1em 0;
+            &:last-of-type {
+              color: $green;
+              font-weight: normal;
+              margin: 0;
+            }
           }
           a {
             @include green-button;
@@ -178,11 +183,14 @@ body {
     &#hosts {
       div {
         display: inline-block;
-        width: 50%;
+        width: 33.33%;
         float: left;
         vertical-align: top;
         margin: 0 0 2em 0;
-        padding: 0 1em 0 0;
+        padding: 0 1em;
+        &:first-of-type {
+          padding: 0 1em 0 0;
+        }
         &:last-of-type {
           padding: 0 0 0 1em;
         }
@@ -192,13 +200,16 @@ body {
           padding: 0 2em 2em 2em;
         }
       }
+      > h3 {
+        clear: both;
+      }
       > a {
         img {
-          width: 50%;
+          width: 25%;
           height: auto;
           float: left;
           margin: 0 0 2em 0;
-          padding: 0 4em;
+          padding: 0 2em;
         }
       }
     }
@@ -263,6 +274,22 @@ body {
           height: 5em;
           width: auto;
           margin: 0 4em 2em 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint3) {
+  body {
+    section {
+      &#introduction,
+      &#hosts {
+        div,
+        div:last-of-type {
+          display: block;
+          width: 100%;
+          padding: 0;
         }
       }
     }
@@ -342,16 +369,9 @@ body {
       }
       &#introduction,
       &#hosts {
-        div,
-        div:last-of-type {
-          display: block;
-          width: 100%;
-          padding: 0;
-        }
         > a {
           img {
-            width: 100%;
-            padding: 0;
+            width: 50%;
           }
         }
       }

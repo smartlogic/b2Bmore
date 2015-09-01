@@ -124,6 +124,10 @@ body {
             font-size: 1.25em;
             font-weight: bold;
             margin: 0 0 1em 0; }
+            body section#introduction div:last-of-type p:last-of-type {
+              color: #00c896;
+              font-weight: normal;
+              margin: 0; }
           body section#introduction div:last-of-type a {
             font-family: 'LTCircular', sans-serif !important;
             -webkit-transition: all 0.5s;
@@ -185,23 +189,27 @@ body {
       border-bottom: none; }
     body section#hosts div {
       display: inline-block;
-      width: 50%;
+      width: 33.33%;
       float: left;
       vertical-align: top;
       margin: 0 0 2em 0;
-      padding: 0 1em 0 0; }
+      padding: 0 1em; }
+      body section#hosts div:first-of-type {
+        padding: 0 1em 0 0; }
       body section#hosts div:last-of-type {
         padding: 0 0 0 1em; }
       body section#hosts div img {
         max-width: 100%;
         height: auto;
         padding: 0 2em 2em 2em; }
+    body section#hosts > h3 {
+      clear: both; }
     body section#hosts > a img {
-      width: 50%;
+      width: 25%;
       height: auto;
       float: left;
       margin: 0 0 2em 0;
-      padding: 0 4em; }
+      padding: 0 2em; }
     body section#application-form .hbspt-form .hs-form {
       max-width: 760px;
       margin: 0; }
@@ -256,6 +264,13 @@ body {
       width: auto;
       margin: 0 4em 2em 0; }
 
+@media (max-width: 768px) {
+  body section#introduction div,
+  body section#introduction div:last-of-type, body section#hosts div,
+  body section#hosts div:last-of-type {
+    display: block;
+    width: 100%;
+    padding: 0; } }
 @media (max-width: 600px) {
   body {
     padding-top: 3em; }
@@ -315,15 +330,8 @@ body {
         display: block; }
     body section#introduction {
       border-top: none; }
-    body section#introduction div,
-    body section#introduction div:last-of-type, body section#hosts div,
-    body section#hosts div:last-of-type {
-      display: block;
-      width: 100%;
-      padding: 0; }
     body section#introduction > a img, body section#hosts > a img {
-      width: 100%;
-      padding: 0; }
+      width: 50%; }
     body section#schedule div.mobile-schedule {
       display: block; }
     body section#schedule table.schedule {
